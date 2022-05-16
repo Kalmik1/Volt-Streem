@@ -1154,10 +1154,11 @@ document.addEventListener('DOMContentLoaded', () => {
       menuLink.forEach(el => {
         el.addEventListener('click', () => {
           if(!el.getAttribute('data-callback')) {
-            body.classList.add('locked')
+            body.classList.remove('locked')
+            menu.classList.remove('active-menu')
+            burger.classList.remove('active-burger')
           }
-          menu.classList.remove('active-menu')
-          burger.classList.remove('active-burger')
+          
         })
       })
   
@@ -1199,13 +1200,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     function scrollTo () {
-      const anchors = document.querySelectorAll('[data-scroll-to]')
+      const anchors = document.querySelectorAll('[data-scroll-to]');
       for (let anchor of anchors) {
           anchor.addEventListener('click', function (e) {
               e.preventDefault();
          
           const blockID = anchor.getAttribute('href'); 
-          // @ts-ignore
           document.querySelector(blockID).scrollIntoView({
               behavior: 'smooth',
               block: 'start'
@@ -1221,14 +1221,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function scrollClassActive() {
     const navbar = document.querySelector('.header__inner');
-    // @ts-ignore
     const navbarHeight = navbar.offsetHeight;
     window.addEventListener('scroll', () => {
       let scrollDistance = window.scrollY;
     
       if (window.innerWidth > 1200) {
         document.querySelectorAll('[data-scroll]').forEach((el, i) => {
-          // @ts-ignore
+    
           if (el.offsetTop - navbarHeight * 2 <= scrollDistance) {
             document.querySelectorAll('.navbar-header a').forEach((el) => {
               if (el.classList.contains('link--active')) {
@@ -1247,8 +1246,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Swiper-------------------------------------------------------------------------------
   
   if(document.querySelector('.main__body')) {
-    // @ts-ignore
-    // @ts-ignore
+  
     const swiper = new Swiper('.swiper__reviews', {
       // Navigation arrows
       navigation: {
@@ -1299,23 +1297,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 if(document.querySelector('.main__body')) {
-  // @ts-ignore
-  // @ts-ignore
   const swiper = new Swiper('.swiper__gallery', {
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper__arrow-gallery-next',
       prevEl: '.swiper__arrow-gallery-prev',
     },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-
-    // Responsive breakpoints
     breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 1,
       spaceBetween: 20
@@ -1324,7 +1311,6 @@ if(document.querySelector('.main__body')) {
       slidesPerView: 1.23,
       spaceBetween: 20
     },
-    // when window width is >= 480px
     480: {
       slidesPerView: 1.5,
       spaceBetween: 20
@@ -1358,28 +1344,16 @@ if(document.querySelector('.main__body')) {
 }
 
 if(document.querySelector('.main__body')) {
-  // @ts-ignore
-  // @ts-ignore
   const swiper = new Swiper('.swiper__certificates', {
-    // Navigation arrows
     navigation: {
       nextEl: '.swiper__arrow-certificates-next',
       prevEl: '.swiper__arrow-certificates-prev',
     },
-  
-    // And if we need scrollbar
-    // scrollbar: {
-    //   el: '.swiper-scrollbar',
-    // },
-
-    // Responsive breakpoints
     breakpoints: {
-    // when window width is >= 320px
     320: {
       slidesPerView: 1,
       spaceBetween: 20
     },
-    // when window width is >= 480px
     480: {
       slidesPerView: 1.2,
       spaceBetween: -60

@@ -2531,6 +2531,7 @@ form .page .btns button.next span {
   border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .form__label input {
@@ -2616,10 +2617,14 @@ form .page .btns button.next span {
 
 .just-validate-error-label {
   position: absolute;
-  top: 70px;
-  color: #F2F2F2 !important;
+  top: 51px;
+  color: red !important;
   max-width: 200px;
   text-align: center;
+  font-size: 15px;
+  padding: 2px 8px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6px;
 }
 
 .section__certificates {
@@ -4270,8 +4275,8 @@ form .page .btns button.next span {
   }
 
   .modal-step__wrapper .modal-step__form-label {
-    height: 50px;
     width: 85%;
+    height: 50px;
   }
 
   .modal-step__wrapper .modal-step__form-input {
@@ -4279,8 +4284,7 @@ form .page .btns button.next span {
   }
 
   .modal-step__wrapper .modal-step__form-input {
-    height: 50px;
-    width: 85%;
+    width: 82%;
   }
 
   .modal-step__wrapper .modal-step__form-btn {
