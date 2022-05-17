@@ -2531,7 +2531,6 @@ form .page .btns button.next span {
   border-radius: 6px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 10px;
 }
 
 .form__label input {
@@ -2617,7 +2616,7 @@ form .page .btns button.next span {
 
 .just-validate-error-label {
   position: absolute;
-  top: 51px;
+  top: 60px;
   color: red !important;
   max-width: 200px;
   text-align: center;
@@ -3536,6 +3535,10 @@ form .page .btns button.next span {
     padding: 20px 61px;
   }
 
+  .just-validate-error-label {
+    top: 51px;
+  }
+
   .section__certificates {
     padding-top: calc(40px + 16 * (100vw - 320px) / 880);
     padding-bottom: calc(40px + 40 * (100vw - 320px) / 880);
@@ -3731,6 +3734,7 @@ form .page .btns button.next span {
 
   .form__label {
     width: 100%;
+    margin-bottom: 10px;
   }
 
   .form__btn {
@@ -3969,6 +3973,10 @@ form .page .btns button.next span {
 
   .form__btn {
     height: 58px;
+  }
+
+  .just-validate-error-label {
+    top: 60px;
   }
 
   .section__certificates .swiper__arrows-certificates {
